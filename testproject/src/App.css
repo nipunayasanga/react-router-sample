@@ -1,0 +1,12 @@
+#header,.links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.links{gap:1rem;}
+.links a{text-decoration: none;color: whitesmoke;transition: 300ms; padding: 0.3em 0.7em;border-radius: 5px;}
+.links a:hover{background-color: aqua;}
+h3{color: aliceblue;}
+#wrapper{margin: 0 auto;max-width: 900px;}
