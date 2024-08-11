@@ -12,8 +12,10 @@ export default function Links() {
       <div className="links">
         <MenuItem linktext="Home" linkurl="/"/>
         <MenuItem linktext="Blog" linkurl="/blog"/>
+        <MenuItem linktext="Products" linkurl="/product"/>
         <MenuItem linktext="About Us" linkurl="/about"/>
         <MenuItem linktext="Contact us" linkurl="/contact"/>
+        
       </div>
     
   )
