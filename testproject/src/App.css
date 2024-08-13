@@ -10,3 +10,19 @@
 .links a:hover{background-color: aqua;}
 h3{color: aliceblue;}
 #wrapper{margin: 0 auto;max-width: 900px;}
+
+
+.box1{
+  background-color: blueviolet;
+  padding: 2em;
+  width: 50%;
+}
+
+.box2{
+  background-color: cadetblue;
+  padding: 2em;
+}
+
+.box3{
+  background-color: darkgreen;
+  padding: 2em;
