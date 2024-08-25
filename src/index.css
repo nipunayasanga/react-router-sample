@@ -73,3 +73,28 @@ button:focus-visible {
   border: 1px solid black;
   border-radius: 20PX;
 }
+
+.btn{
+  margin-right: 10px;
+  
+}
+
+.butt {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.2em 1em;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 10px;
+}
+.butt:hover {
+  border-color: #01b901;
+}
+.butt:focus,
+.butt:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

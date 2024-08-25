@@ -15,6 +15,7 @@ export default function Links() {
         <MenuItem linktext="Products" linkurl="/product"/>
         <MenuItem linktext="React-Props" linkurl="/about"/>
         <MenuItem linktext="Contact us" linkurl="/contact"/>
+        <MenuItem linktext="Login " linkurl="/login"/>
         
       </div>
     

@@ -57,7 +57,10 @@ export default function Products() {
         {products.map((product) => (
             <li 
             style={{"marginBottom":"2em"}} 
-            key={product.id}>{product.title} 
+            key={product.id}>
+            
+            {product.title} 
+            
             <img style={{width:'100px',display:'block', border:'2px solid blue'}} src={product.image} />
             <span>Price.{product.price} LKR</span>
             <div>Ratings {product.rating.rate}</div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderContent from '../HeaderContent/HeaderContent'
 import BodyContent from '../BodyContent/BodyContent'
+import ItemList from '../useState/ItemList'
 
 export default function BlogPage() {
 
@@ -29,6 +30,7 @@ export default function BlogPage() {
 
         </ul>
         
+        <ItemList/>
       </div>
     
     </>
