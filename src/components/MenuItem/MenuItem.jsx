@@ -7,7 +7,9 @@ export default function MenuItem(props) {
         <>
         {/* <a href={props.linkurl}>{props.linktext}</a> */}
 
-        <Link to={props.linkurl}>{props.linktext}</Link>
+      
+
+        <Link to={props.linkurl}> {props.linktext}</Link>
 
         </>
   )
