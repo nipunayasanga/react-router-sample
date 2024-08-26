@@ -1,7 +1,47 @@
 import React from 'react'
 import HeaderContent from '../HeaderContent/HeaderContent'
 import BodyContent from '../BodyContent/BodyContent'
+import { useState, useEffect } from 'react';
 
+
+function DataFetcherAsync() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://fakestoreapi.com/products');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setData(data);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
+    return (
+        <div>
+            <h1>Fetched Data:</h1>
+            <ul>
+                {data.map((item) => (
+                    <li key={item.id}>{item.title}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
 
 export default function Products() {
 
@@ -46,6 +86,9 @@ export default function Products() {
 
   return (
     <>
+
+    
+
     <div id="wrapper">
       <HeaderContent />
       <BodyContent>
@@ -55,9 +98,7 @@ export default function Products() {
     
     <ul>
         {products.map((product) => (
-            <li 
-            style={{"marginBottom":"2em"}} 
-            key={product.id}>
+            <li style={{"marginBottom":"2em"}} key={product.id}>
             
             {product.title} 
             
@@ -68,6 +109,9 @@ export default function Products() {
         ))}
     </ul>
 
+<div>
+<DataFetcherAsync/>
+</div>
   
    </>
   )
